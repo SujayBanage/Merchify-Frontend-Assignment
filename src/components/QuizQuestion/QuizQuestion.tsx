@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./QuizQuestion.css";
 import { Iquestion } from "../../quizQuestions";
 import QuizOption from "../QuizOption/QuizOption";
