@@ -9,7 +9,7 @@ interface ItimerProps {
 }
 
 const CountDownTimer: React.FC<ItimerProps> = ({ minutes, seconds }) => {
-  const { time, setTime } = useContext(timerContext);
+  const { setTime } = useContext(timerContext);
   const navigate = useNavigate();
   const [timerSeconds, setTimerSeconds] = useState<number>(seconds);
   const [timerMinutes, setTimerMinutes] = useState<number>(minutes);
