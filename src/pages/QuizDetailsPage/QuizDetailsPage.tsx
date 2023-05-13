@@ -120,11 +120,11 @@ const QuizDetailsPage = () => {
         </div>
         <div className="options__2">
           <AiOutlineQuestionCircle />
-          <span>5 Questions</span>
+          <span>3 Questions</span>
         </div>
         <div className="options__2">
           <AiOutlineClockCircle />
-          <span>10 Mins</span>
+          <span>1 Mins</span>
         </div>
         <div className="options__2">
           <IoAlbumsOutline />

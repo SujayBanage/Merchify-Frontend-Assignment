@@ -16,14 +16,14 @@ const QuizRules: React.FC<quizRulesProps> = () => {
         <div className="options__3">
           <AiOutlineClockCircle size={25} />
           <div>
-            <h4>10 Mins</h4>
+            <h4>1 Mins</h4>
             <span>Keep in mind that it's a time bound quiz</span>
           </div>
         </div>
         <div className="options__3">
           <AiOutlineQuestionCircle size={25} />
           <div>
-            <h4>5 Questions</h4>
+            <h4>3 Questions</h4>
             <span>We believe that you will ace it!</span>
           </div>
         </div>
@@ -36,7 +36,11 @@ const QuizRules: React.FC<quizRulesProps> = () => {
         </div>
 
         <p className="caution">
-          <BsFillExclamationCircleFill size={18} color="purple" />
+          <BsFillExclamationCircleFill
+            className="caution__icon"
+            size={18}
+            color="purple"
+          />
           This quiz can only be attempted once daily
         </p>
 
