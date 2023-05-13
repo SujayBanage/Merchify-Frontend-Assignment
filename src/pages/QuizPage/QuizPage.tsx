@@ -8,13 +8,16 @@ const QuizPage = () => {
   const navigate = useNavigate();
   const [question, setQuestion] = useState<number>(1);
   const [selectedOption, setSelectedOption] = useState<string>("");
+  const [correctFlag, setCorrectFlag] = useState<boolean>(false);
 
   const nextHandler = () => {
     if (question === questions.length) {
       navigate("/results");
     }
+
     setQuestion(question + 1);
     setSelectedOption("");
+    setCorrectFlag(false);
   };
 
   return (
@@ -27,6 +30,8 @@ const QuizPage = () => {
         question={questions[question - 1]}
         setSelectedOption={setSelectedOption}
         selectedOption={selectedOption}
+        correctFlag={correctFlag}
+        setCorrectFlag={setCorrectFlag}
       />
       <button
         className="next__question-button"

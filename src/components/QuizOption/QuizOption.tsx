@@ -30,7 +30,7 @@ const QuizOption: React.FC<quizOptionProps> = ({
     if (value === correctOption && !correctFlag) {
       setScore(score + 1);
       setCorrectFlag(true);
-    } else if (value === correctOption) {
+    } else if (value === correctOption && correctFlag) {
       setScore(score + 1);
     } else if (value !== correctOption && correctFlag) {
       setScore(score - 1);

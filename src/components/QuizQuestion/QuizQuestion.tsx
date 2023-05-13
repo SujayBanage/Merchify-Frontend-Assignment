@@ -6,15 +6,17 @@ interface quizQuestionProps {
   question: Iquestion;
   setSelectedOption: React.Dispatch<React.SetStateAction<string>>;
   selectedOption: string;
+  correctFlag: boolean;
+  setCorrectFlag: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const QuizQuestion: React.FC<quizQuestionProps> = ({
   question,
   setSelectedOption,
   selectedOption,
+  correctFlag,
+  setCorrectFlag,
 }) => {
-  const [correctFlag, setCorrectFlag] = useState<boolean>(false);
-
   return (
     <section className="quiz__question">
       <label htmlFor="question">{question.question}</label>
