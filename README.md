@@ -35,6 +35,5 @@ This is assignmet for frontend-engineer Role at Merchify . The Task is to create
 ### Instructions for Running Locally
 
 1. Clone the git repository
-2. cd Assignment
-3. npm install
-4. npm run dev
+2. npm install
+3. npm run dev
