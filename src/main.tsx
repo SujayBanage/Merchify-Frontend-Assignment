@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import UserScoreContext from "./context/UserScoreContext.tsx";
+import AssignmentTimerContext from "./context/AssignmentTimerContext.tsx";
 import LazyLoadingScreen from "./components/LazyLoadingScreen/LazyLoadingScreen.tsx";
 import "./index.css";
 
@@ -47,7 +48,9 @@ const AppRouter = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <UserScoreContext>
-      <RouterProvider router={AppRouter} />
+      <AssignmentTimerContext>
+        <RouterProvider router={AppRouter} />
+      </AssignmentTimerContext>
     </UserScoreContext>
   </React.StrictMode>
 );

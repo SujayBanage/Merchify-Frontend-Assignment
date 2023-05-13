@@ -1,5 +1,6 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { timerContext } from "../../context/AssignmentTimerContext";
 import "./CountDownTimer.css";
 
 interface ItimerProps {
@@ -8,6 +9,7 @@ interface ItimerProps {
 }
 
 const CountDownTimer: React.FC<ItimerProps> = ({ minutes, seconds }) => {
+  const { time, setTime } = useContext(timerContext);
   const navigate = useNavigate();
   const [timerSeconds, setTimerSeconds] = useState<number>(seconds);
   const [timerMinutes, setTimerMinutes] = useState<number>(minutes);
@@ -22,6 +24,7 @@ const CountDownTimer: React.FC<ItimerProps> = ({ minutes, seconds }) => {
       navigate("/results", {
         replace: true,
       });
+      setTime(Date.now());
     } else {
       setTimerSeconds(timerSeconds - 1);
     }
