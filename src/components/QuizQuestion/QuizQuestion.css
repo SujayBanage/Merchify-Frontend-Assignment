@@ -1,0 +1,11 @@
+.quiz__question {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px;
+  width: 100%;
+}
+.quiz__question > label {
+  margin-bottom: 50px;
+}

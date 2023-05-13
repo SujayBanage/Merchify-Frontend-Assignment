@@ -1,0 +1,11 @@
+.count__down__timer {
+  background-color: var(--primary__button__color);
+  color: white;
+  height: 25px;
+  width: 50px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
